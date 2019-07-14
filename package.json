@@ -1,0 +1,39 @@
+{
+  "name": "react-copyright-year",
+  "version": "0.0.1",
+  "description": "Component to output copyright string with current year",
+  "main": "build/index.js",
+  "peerDependencies": {
+    "react": "^15.5.4"
+  },
+  "dependencies": {
+    "react": "^15.5.4",
+    "webpack": "^2.6.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack --watch",
+    "build": "webpack",
+    "lint": "eslint --ext .js --ext .jsx .",
+    "lintfix": "yarn lint --fix"
+  },
+  "author": {
+    "name": "Jelizaveta Potapova",
+    "email": "potapova.jelizaveta@gmail.com"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.5.1",
+    "eslint": "^6.0.1",
+    "eslint-config-airbnb": "^17.1.1",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.2",
+    "husky": "^3.0.0",
+    "prettier": "^1.18.2"
+  }
+}
