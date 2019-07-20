@@ -3,11 +3,9 @@
   "version": "0.0.1",
   "description": "Component to output copyright string with current year",
   "main": "build/index.js",
-  "peerDependencies": {
-    "react": "^15.5.4"
-  },
   "dependencies": {
-    "react": "^15.5.4",
+    "react": "^15.6.2",
+    "react-dom": "^15.6.2",
     "webpack": "^2.6.1"
   },
   "scripts": {
@@ -31,6 +29,8 @@
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
     "babel-plugin-transform-react-jsx": "^6.24.1",
     "babel-preset-env": "^1.5.1",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-15": "^1.4.0",
     "eslint": "^6.0.1",
     "eslint-config-airbnb": "^17.1.1",
     "eslint-plugin-import": "^2.18.0",
@@ -39,12 +39,17 @@
     "husky": "^3.0.0",
     "jest": "^24.8.0",
     "prettier": "^1.18.2",
-    "react-test-renderer": "^16.8.6"
+    "react-test-renderer": "^15.6.2"
   },
   "husky": {
     "hooks": {
       "pre-commit": "yarn lint",
       "pre-push": "yarn test"
     }
+  },
+  "jest": {
+    "setupFiles": [
+      "./tests/setupTests.js"
+    ]
   }
 }
