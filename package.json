@@ -4,6 +4,7 @@
   "description": "Component to output copyright string with current year",
   "main": "build/index.js",
   "dependencies": {
+    "prop-types": "^15.7.2",
     "react": "^15.6.2",
     "react-dom": "^15.6.2",
     "webpack": "^2.6.1"
