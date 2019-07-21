@@ -54,4 +54,16 @@ describe('CopyrightYear', () => {
     expect(wrapper.text()).toBe('© 2024 example-site.com');
     MockDate.reset();
   });
+
+  it('renders a copyright info in a single span', () => {
+    const wrapper = shallow(<CopyrightYear />);
+
+    expect(wrapper.type()).toBe('span');
+    expect(
+      wrapper
+        .find('span')
+        .children()
+        .type()
+    ).toBeUndefined();
+  });
 });
