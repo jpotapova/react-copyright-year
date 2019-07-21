@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 function CopyrightYear(props) {
   const { prefix, suffix } = props;
-  return <div>{`${prefix}© ${new Date().getFullYear()}${suffix}`}</div>;
+  return <span>{`${prefix}© ${new Date().getFullYear()}${suffix}`}</span>;
 }
 
 CopyrightYear.defaultProps = {
