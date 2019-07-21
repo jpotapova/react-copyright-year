@@ -66,4 +66,25 @@ describe('CopyrightYear', () => {
         .type()
     ).toBeUndefined();
   });
+
+  it('renders any custom props', () => {
+    MockDate.set('2025');
+    const wrapper = shallow(
+      <CopyrightYear
+        prefix="C "
+        suffix=" mysite.com"
+        data-id="123"
+        aria-label="label goes here"
+        tabindex="-1"
+      />
+    );
+
+    expect(wrapper.text()).toBe('C © 2025 mysite.com');
+    expect(wrapper.prop('data-id')).toBe('123');
+    expect(wrapper.prop('aria-label')).toBe('label goes here');
+    expect(wrapper.prop('tabindex')).toBe('-1');
+    expect(wrapper.prop('prefix')).toBeUndefined();
+    expect(wrapper.prop('suffix')).toBeUndefined();
+    MockDate.reset();
+  });
 });
