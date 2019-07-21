@@ -3,8 +3,8 @@ import { shallow } from 'enzyme';
 
 import CopyrightYear from '../src';
 
-describe('Example suite', () => {
-  it('example test', () => {
+describe('CopyrightYear', () => {
+  it('renders without crashing', () => {
     shallow(<CopyrightYear />);
   });
 });
