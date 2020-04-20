@@ -49,9 +49,25 @@ describe('CopyrightYear', () => {
 
   it('with suffix renders copyright symbol with a year 2024 and suffix', () => {
     MockDate.set('2024');
-    const wrapper = shallow(<CopyrightYear suffix="example-site.com" />);
+    const wrapper = shallow(<CopyrightYear suffix="example.com" />);
 
-    expect(wrapper.text()).toBe('© 2024 example-site.com');
+    expect(wrapper.text()).toBe('© 2024 example.com');
+  });
+
+  it('renders only a year and copyright symbol when prefix and suffix are null', () => {
+    MockDate.set('2031');
+    const wrapper = shallow(<CopyrightYear prefix={null} suffix={null} />);
+
+    expect(wrapper.text()).toBe('© 2031');
+  });
+
+  it('renders only a year and copyright symbol when prefix and suffix are undefined', () => {
+    MockDate.set('2032');
+    const wrapper = shallow(
+      <CopyrightYear prefix={undefined} suffix={undefined} />
+    );
+
+    expect(wrapper.text()).toBe('© 2032');
   });
 
   it('renders a copyright info in a single span', () => {
