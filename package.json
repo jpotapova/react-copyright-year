@@ -2,16 +2,9 @@
   "name": "react-copyright-year",
   "version": "0.1.0",
   "description": "React component to output copyright string with current year",
-  "main": "index.js",
-  "peerDependencies": {
-    "prop-types": "^15.7.2",
-    "react": "^15.6.2",
-    "react-dom": "^15.6.2"
-  },
-  "dependencies": {
-    "babel-plugin-transform-react-jsx": "^6.24.1",
-    "enzyme-adapter-react-15": "^1.4.0",
-    "webpack": "^2.6.1"
+  "author": {
+    "name": "Jelizaveta Potapova",
+    "email": "potapova.jelizaveta@gmail.com"
   },
   "scripts": {
     "test": "jest",
@@ -23,16 +16,20 @@
     "lint:code": "eslint --ext .js --ext .jsx src",
     "lint:tests": "eslint --env jest --ext .js --ext .jsx tests"
   },
-  "author": {
-    "name": "Jelizaveta Potapova",
-    "email": "potapova.jelizaveta@gmail.com"
-  },
-  "devDependencies": {
+  "main": "index.js",
+  "dependencies": {
     "@babel/cli": "^7.1.5",
     "@babel/core": "^7.1.6",
     "@babel/preset-env": "^7.1.6",
     "@babel/preset-react": "^7.0.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "prop-types": "^15.7.2",
+    "react": "^15.6.2",
+    "react-dom": "^15.6.2"
+  },
+  "devDependencies": {
     "enzyme": "^3.10.0",
+    "enzyme-adapter-react-15": "^1.4.0",
     "eslint": "^6.1.0",
     "eslint-config-airbnb": "^17.1.1",
     "eslint-config-prettier": "^6.0.0",
@@ -42,8 +39,6 @@
     "jest": "^24.8.0",
     "mockdate": "^2.0.3",
     "prettier": "^1.18.2",
-    "react": "^15.6.2",
-    "react-dom": "^15.6.2",
     "react-test-renderer": "^15.6.2"
   },
   "husky": {
