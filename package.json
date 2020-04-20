@@ -17,8 +17,11 @@
     "test": "jest",
     "start": "webpack --watch",
     "build": "./node_modules/.bin/babel src --out-file index.js",
-    "lint": "prettier --write **/*.js **/*.jsx && eslint --ext .js --ext .jsx .",
-    "lintfix": "yarn lint --fix"
+    "health": "yarn prettier && yarn lint",
+    "prettier": "prettier --write **/*.js **/*.jsx",
+    "lint": "yarn lint:code && yarn lint:tests",
+    "lint:code": "eslint --ext .js --ext .jsx src",
+    "lint:tests": "eslint --env jest --ext .js --ext .jsx tests"
   },
   "author": {
     "name": "Jelizaveta Potapova",
@@ -45,7 +48,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn lint",
+      "pre-commit": "yarn health",
       "pre-push": "yarn test"
     }
   },
