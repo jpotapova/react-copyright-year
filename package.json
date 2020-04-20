@@ -1,7 +1,7 @@
 {
   "name": "react-copyright-year",
-  "version": "0.0.1",
-  "description": "Component to output copyright string with current year",
+  "version": "0.1.0",
+  "description": "React component to output copyright string with current year",
   "main": "index.js",
   "peerDependencies": {
     "prop-types": "^15.7.2",
