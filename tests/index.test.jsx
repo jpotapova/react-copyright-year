@@ -5,6 +5,10 @@ import MockDate from 'mockdate';
 import CopyrightYear from '../src';
 
 describe('CopyrightYear', () => {
+  afterEach(() => {
+    MockDate.reset();
+  });
+
   it('renders without crashing', () => {
     shallow(<CopyrightYear />);
   });
@@ -15,7 +19,6 @@ describe('CopyrightYear', () => {
       const wrapper = shallow(<CopyrightYear />);
 
       expect(wrapper.text()).toBe('© 2019');
-      MockDate.reset();
     });
 
     it('renders copyright symbol with a year 2022', () => {
@@ -23,7 +26,6 @@ describe('CopyrightYear', () => {
       const wrapper = shallow(<CopyrightYear />);
 
       expect(wrapper.text()).toBe('© 2022');
-      MockDate.reset();
     });
   });
 
@@ -33,7 +35,6 @@ describe('CopyrightYear', () => {
       const wrapper = shallow(<CopyrightYear prefix="Copyright" />);
 
       expect(wrapper.text()).toBe('Copyright © 2016');
-      MockDate.reset();
     });
 
     it('and suffix renders copyright symbol with a year 2030 and prefix and suffix', () => {
@@ -43,7 +44,6 @@ describe('CopyrightYear', () => {
       );
 
       expect(wrapper.text()).toBe('Copyright © 2030 example-site.com');
-      MockDate.reset();
     });
   });
 
@@ -52,7 +52,6 @@ describe('CopyrightYear', () => {
     const wrapper = shallow(<CopyrightYear suffix="example-site.com" />);
 
     expect(wrapper.text()).toBe('© 2024 example-site.com');
-    MockDate.reset();
   });
 
   it('renders a copyright info in a single span', () => {
@@ -83,7 +82,6 @@ describe('CopyrightYear', () => {
     expect(wrapper.prop('data-id')).toBe('123');
     expect(wrapper.prop('aria-label')).toBe('label goes here');
     expect(wrapper.prop('tabindex')).toBe('-1');
-    MockDate.reset();
   });
 
   it('does not render prefix and suffix as custom props', () => {
@@ -101,6 +99,5 @@ describe('CopyrightYear', () => {
     expect(wrapper.text()).toBe('C © 2027 mysite.com');
     expect(wrapper.prop('prefix')).toBeUndefined();
     expect(wrapper.prop('suffix')).toBeUndefined();
-    MockDate.reset();
   });
 });
