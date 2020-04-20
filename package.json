@@ -8,6 +8,7 @@
   },
   "scripts": {
     "test": "jest",
+    "test:watch": "jest --watch",
     "build": "./node_modules/.bin/babel src --out-file index.js",
     "health": "yarn prettier && yarn lint",
     "prettier": "prettier --write **/*.js **/*.jsx",
