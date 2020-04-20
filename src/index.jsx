@@ -2,14 +2,19 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function CopyrightYear({ prefix, suffix, ...rest }) {
+  const formattedPrefix = prefix ? `${prefix} ` : '';
+  const formattedSuffix = suffix ? ` ${suffix}` : '';
+
   return (
-    <span {...rest}>{`${prefix}© ${new Date().getFullYear()}${suffix}`}</span>
+    <span {...rest}>
+      {`${formattedPrefix}© ${new Date().getFullYear()}${formattedSuffix}`}
+    </span>
   );
 }
 
 CopyrightYear.defaultProps = {
-  prefix: '',
-  suffix: ''
+  prefix: null,
+  suffix: null
 };
 
 CopyrightYear.propTypes = {
