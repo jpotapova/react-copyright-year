@@ -1,20 +1,3 @@
 {
-  "extends": ["airbnb", "prettier"],
-  "globals": {
-    "document": true,
-    "window": true,
-  },
-  "env": {
-    "jest": true,
-  },
-  "rules": {
-    "import/prefer-default-export": 0,
-  },
-  "settings": {
-    "import/resolver": {
-      "node": {
-        "paths": ["src"],
-      }
-    }
-  },
+  "extends": ["airbnb", "prettier"]
 }
