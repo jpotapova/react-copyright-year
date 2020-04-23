@@ -17,15 +17,17 @@
     "lint:tests": "eslint --env jest --ext .js --ext .jsx tests"
   },
   "main": "index.js",
+  "peerDependencies": {
+    "react": "^15.0.0",
+    "react-dom": "^15.0.0"
+  },
   "dependencies": {
     "@babel/cli": "^7.1.5",
     "@babel/core": "^7.1.6",
     "@babel/preset-env": "^7.1.6",
     "@babel/preset-react": "^7.0.0",
     "babel-plugin-transform-react-jsx": "^6.24.1",
-    "prop-types": "^15.7.2",
-    "react": "^15.6.2",
-    "react-dom": "^15.6.2"
+    "prop-types": "^15.7.2"
   },
   "devDependencies": {
     "enzyme": "^3.10.0",
