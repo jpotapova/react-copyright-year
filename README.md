@@ -2,6 +2,8 @@
 
 A React component to display copyright symbol followed by a current year
 
+![react-copyright-year preview](https://raw.githubusercontent.com/jpotapova/react-copyright-year/master/preview.png)
+
 # Installation
 
 ```
