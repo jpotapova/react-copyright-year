@@ -1,6 +1,6 @@
 {
   "name": "react-copyright-year",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "React component to output copyright string with current year",
   "author": {
     "name": "Jelizaveta Potapova",
