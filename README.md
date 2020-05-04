@@ -18,13 +18,13 @@ npm install react-copyright-year --save
 
 # Usage
 
-1. import
+Import
 
 ```js
 import CopyrightYear from 'react-copyright-year';
 ```
 
-2. use
+Use
 
 ```js
 <CopyrightYear />
