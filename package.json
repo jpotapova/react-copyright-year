@@ -56,5 +56,12 @@
     "setupFiles": [
       "./tests/setupTests.js"
     ]
-  }
+  },
+  "keywords": [
+    "react",
+    "react-component",
+    "copyright",
+    "year",
+    "date"
+  ]
 }
